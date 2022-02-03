@@ -1,0 +1,13 @@
+html, body {
+  height: 100%;
+}
+.bg {
+    background-image: url("../imagenes/entrada.jpg");
+    height: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg-verde {background-color: #CAE752;}
+
+  
