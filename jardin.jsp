@@ -1,6 +1,6 @@
-<%--buscador.jsp--%>
+<%--jardin.jsp--%>
 <%-- 
-    Document   : buscador
+    Document   : Tu Jardin
     Created on : 3 feb 2022, 1:27:30
     Author     : Natalia
 --%>
@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Mi Jard?n</a>
+                        <a class="nav-link active" aria-current="page" href="#">Mi Jardin</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="registro.jsp">Buscar Plantas</a>
@@ -45,7 +45,7 @@
                             Dropdown
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Mi Jardin</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -59,46 +59,18 @@
         </div>
     </nav>
     <div id="wraper" class="container">
-             <h1>probando conexion base datos</h1>
-        <div class="panel panel-default">
-            <div class="panel-body">
-        <%
-          Class.forName("com.mysql.jdbc.Driver");
-          Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/usuarios?useSSL=false&allowPublicKeyRetrieval=true","root", "root");
-          Statement s = conexion.createStatement();
-          
-          ResultSet listado = s.executeQuery("SELECT * FROM suscriptor ORDER BY nombre");
-        %>
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Correo electrónico</th>
-                <th scope="col">Pais</th>
-              </tr>
-            </thead>
-            <tbody>
-        <%
-          while (listado.next()) {
-            %>
-            <tr>
-                <td><%=listado.getString("id")%></td>
-                <td><%=listado.getString("nombre")%></td>
-                <td><%=listado.getString("email")%></td>
-                <td><%=listado.getString("pais")%></td>
-            </tr>
-            <%
-            //out.println(listado.getString("id") + " " + listado.getString("nombre") + " " + listado.getString("email") + listado.getString("pais") + "<br>");
-          }
-          
-          conexion.close();
-        %>
-            </tbody>
-          </table>
-          </div>
-        </div>         
+        lelele
+        
+        
     </div>
+
+
+
+
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
