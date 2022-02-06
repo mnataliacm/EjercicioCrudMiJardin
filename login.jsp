@@ -19,6 +19,30 @@
         <link rel="stylesheet" href="./estilo/style.css">
     </head>
     <body class="bg-success">
+      <nav class="navbar navbar-expand-md navbar-light bg-warning sticky-top ">
+        <div class="container-fluid fs-5">
+            <a class="navbar-brand" href="/MiJardin/index.html"><i class="fa fa-tree" aria-hidden="true"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Mi Jardin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="buscador.jsp">Buscar Plantas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active"  aria-current="page" href="login.jsp">Acceder</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registro.jsp">Registro</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
         <!-- ventana de logging -->
         <div class="container-fluid">
             <div class="m-0 vh-100 row justify-content-center align-items-center">   
@@ -41,7 +65,7 @@
                             <input type="password" class="form-control" id="inputPassword3">
                         </div>
                     </div>
-                    <a class="btn btn-primary" href="index.html">Sign in a home</a>                
+                    <a class="btn-lg btn-warning" href="index.html">Entrar</a>                
                 </div> 
             </div>
             </div>
@@ -50,7 +74,7 @@
     </body>
 </html>
 
-<!-- comprobación del usuario si no está registrado mensaje de error
-si está registrado accede a "Mi jardin"
-si es admin entrará a la ventana de administración. -->
+<!-- comprobacion del usuario si no esta registrado mensaje de error
+si esta registrado accede a "Mi jardin"
+si es admin entrara a la ventana de administracion. -->
 
