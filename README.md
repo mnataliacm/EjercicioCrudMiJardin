@@ -7,7 +7,7 @@ Ejercicio CRUD (aplicación web)
 > - Lleva el control de tu jardin (requiere registro)
 > 
 
-![Acceso](imagenes/capturas/entrada.png)
+![Entrada](https://github.com/mnataliacm/EjercicioCrudMiJardin/tree/main/imagenes/capturas/entrada.png)
 
 ![](imagenes/capturas/entrada.png)
 
