@@ -22,4 +22,5 @@ Listado de plantas (buscador.jsp)
 
 sigue en construccion!.........
 
+![regisstro](https://raw.githubusercontent.com/mnataliacm/EjercicioCrudMiJardin/main/imagenes/Capturas/registro.png)
 
