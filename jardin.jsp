@@ -1,4 +1,8 @@
 <%--jardin.jsp--%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
 <%-- 
     Document   : Tu Jardin
     Created on : 3 feb 2022, 1:27:30
@@ -21,8 +25,8 @@
         <link rel="stylesheet" href="./estilo/style.css">
     </head>
 <body class="bg-success">
-    <div></div>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div id="wraper">
+<nav class="navbar navbar-expand-md navbar-light bg-warning sticky-top ">
         <div class="container-fluid fs-5">
             <a class="navbar-brand" href="/MiJardin/index.html"><i class="fa fa-tree" aria-hidden="true"></i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,34 +35,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Mi Jardin</a>
+                        <a class="nav-link" aria-current="page" href="index.html">Mi Jardin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="registro.jsp">Buscar Plantas</a>
+                        <a class="nav-link active" aria-current="page" href="#">Buscar Plantas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="login.jsp">Acceder</a>
                     </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Mi Jardin</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link" href="registro.jsp">Registro</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div id="wraper" class="container">
+    <div class="container">
         lelele
         
         
@@ -70,7 +62,7 @@
 
 
 
-
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
