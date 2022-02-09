@@ -1,4 +1,4 @@
-# EjercicioCrudMiJardin
+#🎍 EjercicioCrudMiJardin
 Ejercicio CRUD (aplicación web)
 
 >             **_Mi Jardín_**
@@ -7,7 +7,9 @@ Ejercicio CRUD (aplicación web)
 > - Lleva el control de tu jardin (requiere registro)
 > 
 
-![Acceso](./capturas/entra.png)
+![Acceso](./imagenes/capturas/entrada.png)
+
+![Acceso](./imagenes/capturas/entrada.png)
 
 
 
