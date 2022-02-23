@@ -1,13 +1,51 @@
 html, body {
   height: 100%;
 }
-.bg {
-    background-image: url("../imagenes/entrada.jpg");
-    height: 75%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.bg-verde {background-color: #CAE752;}
 
-  
+.bg-verde,
+.table-verde {
+  background-color: #CAE752;
+}
+
+
+
+/*añado responsive de la tabla a tamaño movil*/
+.table-responsive-stack tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+
+.table-responsive-stack td,
+.table-responsive-stack th {
+   display:block;
+ /*flex-grow | flex-shrink | flex-basis  */ 
+   -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.table-responsive-stack .table-responsive-stack-thead {
+   font-weight: bold;
+}
+
+@media screen and (max-width: 768px) { 
+   .table-responsive-stack tr {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column column;
+              flex-direction: column;
+      border-bottom: 3px solid #ccc;
+      display:block;
+      
+   }
+    /* IE9 FIX   */
+   .table-responsive-stack td {
+      float: left\9;
+      width:100%;
+   }
+}

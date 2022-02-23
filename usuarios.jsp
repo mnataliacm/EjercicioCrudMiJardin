@@ -1,10 +1,10 @@
-<%--buscador.jsp--%>
+<%--usuarios.jsp--%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
 <%-- 
-    Document   : buscador
+    Document   : usuarios
     Author     : Natalia Castillo
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -13,7 +13,7 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mi Jardin - Base de datos</title>
+    <title>Mi Jardin - Usuarios</title>
     <link rel="shortcut icon" href="./imagenes/iconoflor.png" type="image/x-icon">
     <!-- CSS bootstrap -->
     <link
@@ -33,8 +33,8 @@
     <!-- CSS mio -->
     <link rel="stylesheet" href="./estilo/style.css">
   </head>
-  <body class="bg-success">
-    <div id="wraper" class="container-flex">
+  <body>
+    <div id="wraper" class="container-flex bg-success">
 
       <!-- barra de navegación -->
       <nav class="navbar navbar-expand-md navbar-light bg-warning sticky-top mb-3">
@@ -57,8 +57,9 @@
                                       aria-current="page" href="formularioRegistro.jsp">Registro</a></li>
               <li class="nav-item"><a class="nav-link" href="tuJardin.jsp">Mi
                   Jardin</a></li>
-              <li class="nav-item"><a class="nav-link active" href="buscador.jsp">Buscar
-                  Plantas</a></li>        
+              <li class="nav-item"><a class="nav-link " href="buscador.jsp">Buscar
+                  Plantas</a></li> 
+              <li class="nav-item"><a class="nav-link active" href="usuarios.jsp">Usuarios</a></li>
             </ul>
           </div>
         </div> 
@@ -70,46 +71,38 @@
         Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mijardin","root", "");
         Statement s = conexion.createStatement();
               
-        ResultSet listado = s.executeQuery("SELECT * FROM planta ORDER BY plantaID");            
+        ResultSet listado = s.executeQuery("SELECT * FROM usuarios ORDER BY usuarios");            
       %> 
 
       <!-- listado de plantas     table-responsive-stack table  table-success table-striped -->
       <div class="container">
         <div class=" panel panel-light">
-          <h2 class="panel-heading text-center bg-verde">BASE DE DATOS DE PLANTAS</h2> 
+          <h2 class="panel-heading text-center bg-verde">BASE DE DATOS DE USUARIOS</h2> 
           <table class="table table-striped table-verde">  
-            <form method="post" action="grabarPlanta.jsp">
-              <tr class="table-warning"><td><input type="text" name="plantaID" size="5" requiered></td>
-                <td><input type="text" name="familia" size="30" required></td>
-                <td><input type="text" name="nombre" size="30" required></td>
-                <td><input type="text" name="cientifico" size="30"required></td>
-                <td><button type="submit" value="Añadir" class="btn btn-primary"><span class="bi bi-plus-circle"></span>Añadir </button></td></tr>
-
-              <tr class="table-dark"><th>Nº de planta</th><th>Familia</th><th>Nombre</th><th>Cientifico</th></tr>
-            </form>
-
+            
+              <tr class="table-dark"><th>Usuario</th><th>Contraseña</th><th>Nombre</th><th>Rango</th></tr>
+            
             <%
               while (listado.next()) {
                 out.println("<tr><td>");
-                out.println(listado.getString("plantaID") + "</td>");
-                out.println("<td>" + listado.getString("familia") + "</td>");
+                out.println(listado.getString("usuarios") + "</td>");
+                out.println("<td>" + listado.getString("password") + "</td>");
                 out.println("<td>" + listado.getString("nombre") + "</td>");
-                out.println("<td>" + listado.getString("cientifico") + "</td>");
+                out.println("<td>" + listado.getString("rango") + "</td>");
             %>
             <!-- modificar -->
             <td>
-              <form method="post" action="modificarPlanta.jsp">
-                <input type="hidden" name="plantaID" value="<%=listado.getString("plantaID") %>">
-                <input type="hidden" name="familia" value="<%=listado.getString("familia") %>">
-                <input type="hidden" name="nombre" value="<%=listado.getString("nombre") %>">
-                <input type="hidden" name="cientifico" value="<%=listado.getString("cientifico") %>">
+              <form method="post" action="modificarUsuario.jsp">
+                <input type="hidden" name="usuarios" value="<%=listado.getString("usuarios") %>">
+                <input type="hidden" name="password" value="<%=listado.getString("password") %>">
+                <input type="hidden" name="rango" value="<%=listado.getString("rango") %>">
                 <button type="submit"  class="btn btn-info"><span class="bi bi-pencil-fill"> </span> Editar</button>
               </form>
             </td>
             <%--borrar--%>
             <td>
-              <form method="post" action="borrarPlanta.jsp">
-                <input type="hidden" name="plantaID" value="<%=listado.getString("plantaID") %>"/>
+              <form method="post" action="borrarUsuario.jsp">
+                <input type="hidden" name="usuarios" value="<%=listado.getString("usuarios") %>"/>
                 <button type="submit" class="btn btn-danger"><span class="bi bi-trash-fill"></span> Borrar</button>
               </form>
             </td></tr>
