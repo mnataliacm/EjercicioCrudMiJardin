@@ -38,6 +38,7 @@ CREATE TABLE `ciudad` (
 --
 
 INSERT INTO `ciudad` (`CODCIU`, `NOMBRE`, `CODPAI`) VALUES
+<<<<<<< HEAD
 (1, 'Ninghai', 0),
 (2, 'Ban Na San', 0),
 (3, 'Doloplazy', 0),
@@ -135,6 +136,24 @@ INSERT INTO `colores` (`CODCOL`, `COLOR`) VALUES
 (28, 'Coral'),
 (29, 'Pea green'),
 (30, 'Navy blue');
+=======
+(1, 'Ninghai', 1),
+(2, 'Ban Na San', 2),
+(3, 'Doloplazy', 3),
+(4, 'Waenenda', 4),
+(5, 'Bārah', 5),
+(6, 'Jiuheyuan', 6),
+(7, 'Léo', 7),
+(8, 'Dulce Nombre de Culmí', 8),
+(9, 'Fuyo', 9),
+(10, 'Pajé', 10),
+(11, 'Zielonka', 11),
+(12, 'Estancia', 12),
+(13, 'Vales', 13),
+(14, 'Ruy Barbosa', 14),
+(15, 'Ban Na', 15);
+
+>>>>>>> e02c66d89b383716f37a7215aa4c1a74a7758b05
 
 -- --------------------------------------------------------
 
@@ -177,6 +196,7 @@ INSERT INTO `pais` (`CODPAI`, `PAIS`) VALUES
 (12, 'Iraq'),
 (13, 'Iran'),
 (14, 'Japan'),
+<<<<<<< HEAD
 (15, 'Mali'),
 (16, 'Mexico'),
 (17, 'Philippines'),
@@ -190,6 +210,10 @@ INSERT INTO `pais` (`CODPAI`, `PAIS`) VALUES
 (25, 'Ukraine'),
 (26, 'Uruguay'),
 (27, 'Zambia');
+=======
+(15, 'Mali');
+
+>>>>>>> e02c66d89b383716f37a7215aa4c1a74a7758b05
 
 -- --------------------------------------------------------
 
@@ -228,6 +252,7 @@ INSERT INTO `planta` (`plantaID`, `familia`, `nombre`, `cientifico`) VALUES
 (17, 'Apiaceae', 'Featherleaf Springparsley', ''),
 (18, 'Brassicaceae', 'Muncy Rockcress', ''),
 (19, 'Fabaceae', 'King\'s Clover', ''),
+<<<<<<< HEAD
 (20, 'Asteraceae', 'Prairie Blazing Star', ''),
 (21, 'Primulaceae', 'Loomis\' Yellow Loosestrife', ''),
 (22, 'Fabaceae', 'Silver Prairie Clover', ''),
@@ -301,6 +326,10 @@ INSERT INTO `planta` (`plantaID`, `familia`, `nombre`, `cientifico`) VALUES
 (90, 'Cecropiaceae', 'Trumpet Tree', ''),
 (91, 'Fabaceae', 'Scotch Broom', ''),
 (200, 'probando', 'monica', 'lerele');
+=======
+(20, 'Asteraceae', 'Prairie Blazing Star', '');
+
+>>>>>>> e02c66d89b383716f37a7215aa4c1a74a7758b05
 
 -- --------------------------------------------------------
 
@@ -336,6 +365,7 @@ INSERT INTO `usuarios` (`usuarios`, `password`, `nombre`, `apellidos`, `via`, `n
 ('Denver MacGillavery', '12345', '', '', '', 0, '503-56-3864', '', '', '', 0, 'dmacgillavery2@microsoft.com', '', 'U'),
 ('Duncan Hizir', '12345', '', '', '', 0, '599-16-7336', '', '', '', 0, 'dhizir3@oracle.com', '', 'U'),
 ('Kinnie Fanstone', '12345', '', '', '', 0, '375-60-3641', '', '', '', 0, 'kfanstone9@comcast.net', '', 'U'),
+<<<<<<< HEAD
 ('Margret M\'cowis', '12345', '', '', '', 0, '699-14-1719', '', '', '', 0, 'mmcowis8@mapy.cz', '', 'U'),
 ('Rosanna Jostan', '12345', '', '', '', 0, '810-99-5063', '', '', '', 0, 'rjostan4@wunderground.com', '', 'U'),
 ('Tildi Harrald', '12345', '', '', '', 0, '771-05-1150', '', '', '', 0, 'tharrald5@craigslist.org', '', 'U'),
@@ -345,6 +375,10 @@ INSERT INTO `usuarios` (`usuarios`, `password`, `nombre`, `apellidos`, `via`, `n
 ('usuario1', 'usuario1', '', '', '', 0, '', '', '', '', 0, 'email1@email.com', '', 'C'),
 ('usuario2', 'usuario2', '', '', '', 0, '', '', '', '', 0, 'email2@email.com', '', 'C'),
 ('usuario456456', '123456', 'lelele', 'gsdfgsfdg', 'Bulevard', 6, '', 'orernse', 'hkhklh', '...', 22222, 'email@email.com', 'hlkhlkjh', 'U');
+=======
+('usuario', 'usuario', '', '', '', 0, '', '', '', '', 0, '', '', 'C'),
+('usuario1', 'usuario1', '', '', '', 0, '', '', '', '', 0, 'email1@email.com', '', 'U');
+>>>>>>> e02c66d89b383716f37a7215aa4c1a74a7758b05
 
 --
 -- Índices para tablas volcadas
@@ -358,12 +392,15 @@ ALTER TABLE `ciudad`
   ADD KEY `CODPAI` (`CODPAI`);
 
 --
+<<<<<<< HEAD
 -- Indices de la tabla `colores`
 --
 ALTER TABLE `colores`
   ADD PRIMARY KEY (`CODCOL`);
 
 --
+=======
+>>>>>>> e02c66d89b383716f37a7215aa4c1a74a7758b05
 -- Indices de la tabla `jardin`
 --
 ALTER TABLE `jardin`
@@ -399,11 +436,14 @@ ALTER TABLE `usuarios`
 ALTER TABLE `ciudad`
   MODIFY `CODCIU` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
+<<<<<<< HEAD
 --
 -- AUTO_INCREMENT de la tabla `colores`
 --
 ALTER TABLE `colores`
   MODIFY `CODCOL` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+=======
+>>>>>>> e02c66d89b383716f37a7215aa4c1a74a7758b05
 
 --
 -- AUTO_INCREMENT de la tabla `jardin`
@@ -416,12 +456,15 @@ ALTER TABLE `jardin`
 --
 ALTER TABLE `pais`
   MODIFY `CODPAI` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+<<<<<<< HEAD
 
 --
 -- AUTO_INCREMENT de la tabla `planta`
 --
 ALTER TABLE `planta`
   MODIFY `plantaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201;
+=======
+>>>>>>> e02c66d89b383716f37a7215aa4c1a74a7758b05
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
