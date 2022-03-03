@@ -1,12 +1,38 @@
 html, body {
   height: 100%;
+  background: linear-gradient(to bottom, #cc00ff 0%, #00cc00 100%);
 }
 
 .bg-verde,
-.table-verde {
+.table-verde,
+.btn-verde {
   background-color: #CAE752;
 }
-
+.bg-verdoso {
+  background-color: #5caa18;
+}
+.bg-tostado {
+  background-color: #FBA00F;
+}
+.bg-malaga {
+  background: linear-gradient(to bottom, #cc00ff 0%, #00cc00 100%);
+}
+.bg-indigo {
+  background-color: #6610f2;
+}
+.bg-amarillo {
+  background-color: #ffc107;
+}
+.bg-naranja {
+  background-color: #fd7e14;
+}
+.bg-rojo {
+  background-color: #dc3545;
+}
+.bg-turquesa,
+.btn-turquesa {
+  background-color: #20c997;
+}
 
 
 /*añado responsive de la tabla a tamaño movil*/
