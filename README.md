@@ -42,8 +42,8 @@ Si accede el administrador puede editar y eliminar usuarios (usuario.jsp, formul
 Si accede el colaborador puede añadir, editar y borrar plantas. Y ver la lista de familias. (bucadorColab.jsp, formularioEditarPlantas.jsp)
 
 ![añadirPlantas](https://user-images.githubusercontent.com/74043250/156651688-0d120fbc-5e36-4d5a-9898-ce2928d99e33.png)
-![formularioEditarPlantas](https://user-images.githubusercontent.com/74043250/156652111-e0d0aec8-25f9-4167-9d47-331c7ddbc405.png)
-![listaFamilias](https://user-images.githubusercontent.com/74043250/156651777-6166a0d6-53f4-4cb1-898c-ff3459a5e5da.png)
+![formularioEditarPlantas](https://user-images.githubusercontent.com/74043250/156788926-3d449e27-96b4-438b-95bd-4df161e42d9c.png)
+![listaFamilias](https://user-images.githubusercontent.com/74043250/156789031-a788b48e-a2fb-4789-9ad9-e3e46f563208.png)
 
 Ventana de confirmación y de error (ok.jsp, error.jsp)
 
