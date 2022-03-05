@@ -42,8 +42,8 @@ Si accede el administrador puede editar y eliminar usuarios (usuario.jsp, formul
 Si accede el colaborador puede añadir, editar y borrar plantas. Y ver la lista de familias. (bucadorColab.jsp, formularioEditarPlantas.jsp)
 
 ![añadirPlantas](https://user-images.githubusercontent.com/74043250/156651688-0d120fbc-5e36-4d5a-9898-ce2928d99e33.png)
-![formularioEditarPlantas](https://user-images.githubusercontent.com/74043250/156788926-3d449e27-96b4-438b-95bd-4df161e42d9c.png)
-![listaFamilias](https://user-images.githubusercontent.com/74043250/156789031-a788b48e-a2fb-4789-9ad9-e3e46f563208.png)
+![formularioEditarPlantas](https://user-images.githubusercontent.com/74043250/156652111-e0d0aec8-25f9-4167-9d47-331c7ddbc405.png)
+![listaFamilias](https://user-images.githubusercontent.com/74043250/156651777-6166a0d6-53f4-4cb1-898c-ff3459a5e5da.png)
 
 Ventana de confirmación y de error (ok.jsp, error.jsp)
 
@@ -53,19 +53,20 @@ Ventana de confirmación y de error (ok.jsp, error.jsp)
 ![cenefaVerde](https://user-images.githubusercontent.com/74043250/156653966-c75a3654-bba9-4ef0-9793-89cefc746c77.png)
 
 ###### Funcionalidades
-* Si accedes sin cuenta puedes registrarte y ver la lista de plantas.
-* Si te registras e inicias sesión aparece el botón añadir al jardín.
-* El administrador se encarga de los usuarios.
+* Si accedes sin cuenta puedes ver la lista de plantas y crear una cuenta nueva.
+* Los usuarios registrados pueden ver su perfil y su jardin, al que pueden añadir plantas.
+* El administrador solo se encarga de administrar los usuarios.
 * El colaborador se encarga de la base de datos de las plantas.
-* Según el usuario aparece la barra de herramientas con unos botones u otros (sin loguear, logueado, admin y colaborador.
+* Según el usuario aparece la barra de herramientas con unos botones u otros (sin loguear, logueado, admin y colaborador).
 * 
 
 
 
-
+---------------------------------------------------------------------------------------
 Sigue en construcción ...
 Añadir perfil de usuario
 Agregar eliminar plantas del jardin
-Mejorar bd y jardín para que el usuario puede añadir información de sus plantas.
+Mejorar bd y jardín para que el usuario puede añadir más información de sus plantas.
+
 
 

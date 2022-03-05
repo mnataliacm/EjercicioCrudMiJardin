@@ -30,8 +30,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="buscador.jsp">Lista de Plantas</a>
-        </li>
-        
+        </li>      
         <%
           } else {
         %>
@@ -50,7 +49,6 @@
       </ul>
       
       <form class="form-inline">
-
         <%
           if (session.getAttribute("usuario") == null) {
         %>
@@ -58,15 +56,12 @@
         <%
           } else {
         %>
-        Bienvenido, <a href="perfil.jsp"><%= session.getAttribute("usuario") %></a>
-        (<a href="logout.jsp">Salir</a>)
+        <pre>Bienvenid@, <strong><%=session.getAttribute("usuario") %></strong>.   <a href="perfil.jsp">Tu perfil</a> (<a href="logout.jsp">Salir</a>)</pre>      
         <%
                   
         }
         %>
-
       </form>       
     </div>
-
   </div> 
 </nav>

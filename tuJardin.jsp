@@ -36,7 +36,10 @@
         Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/mijardin","root", "");        
         Statement n = conexion.createStatement();  
         
-        String user = request.getParameter("usuario");
+        int codigo = (int) session.getAttribute("codigo");
+        
+        String nombre = (String) session.getAttribute("usuario");
+        String user = nombre.toUpperCase().charAt(0) + nombre.substring(1, nombre.length()).toLowerCase();
         int conteo = 0;
 
         ResultSet jardin = n.executeQuery("SELECT p.nombre, p.cientifico, f.familia, j.codpla"
@@ -46,35 +49,43 @@
               + " INNER JOIN usuarios u ON u.codusu = j.codusu"
               + " WHERE u.usuario LIKE '" + session.getAttribute("usuario") + "'");
         
-        
       %>
       <!-- listado de plantas del jardin del usuario-->
       <div class="container-flex m-3">
         <div class=" panel">
-          <h2 class="panel-heading text-center bg-verde">Jardín de <%=session.getAttribute("usuario") %></h2>  
+          <h2 class="panel-heading text-center bg-turquesa">Jardín de <%=user %></h2>  
         </div>      
         <div class="container-flex text-center">
           <table>
             <div class="row row-cols-1 row-cols-md-4 g-4">
-              <%              
+              <% 
+                String planta = request.getParameter("j.codpla");
                 while (jardin.next()) {
                   conteo++;                  
               %>         
               <div class="col">                 
                 <div class="card">             
-                  <div class="card-header">                  
-                    <%=jardin.getString("f.familia") %>     
+                  <div class="card-header">
+                    <div class="modal-header">
+                      <h4><%=jardin.getString("p.nombre") %></h4>
+                      <form method="post" action="borraDeJardin.jsp">
+                        <input type="hidden" name="codpla" value="<%=jardin.getString("codpla") %>">
+                        <button type="submit" class="btn btn-close"></button>
+                      </form>
+                    </div>
                   </div>
-                    
                   <div class="card-body">
                     <h6 class="card-title"><%=jardin.getString("p.cientifico") %></h6>
                     <img src="" class="card-img-top">
                     <p class="card-text">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque diam volutpat commodo sed egestas egestas. Netus et malesuada fames ac turpis egestas maecenas. Nisl condimentum id venenatis a condimentum vitae sapien. Turpis egestas maecenas pharetra convallis. 
+                      out.println(<%=jardin.getString("codpla")%>);
+                      out.println(<%=nombre %> + " " + <%=codigo %> );
+
                     </p>
                   </div>
                   <div class="card-footer">
-                    <h5><%=jardin.getString("p.nombre") %></h5>
+                    <h5><%=jardin.getString("f.familia") %></h5>
                   </div>          
                 </div>
               </div>               
@@ -89,7 +100,7 @@
     </div> <!-- fin wraper --> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
     <script src="./js/javascript.js"></script>
   </body>
 </html>
