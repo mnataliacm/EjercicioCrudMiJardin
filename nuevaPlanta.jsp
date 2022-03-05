@@ -28,6 +28,7 @@
                            + Integer.valueOf(request.getParameter("codpla"))
                            + ", '" + request.getParameter("nombre")
                            + "', '" + request.getParameter("cientifico")
+                           + "', '" + request.getParameter("info")
                            + "', '" + request.getParameter("familia")
                            + "')";
         s.execute(insercion);

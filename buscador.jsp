@@ -41,7 +41,7 @@
         String usuario = (String) session.getAttribute("usuario");
         String codigo = "SELECT codusu FROM usuarios WHERE usuario LIKE ('" + usuario + "')";
       
-        ResultSet listado = n.executeQuery("SELECT p.codpla, p.nombre, p.cientifico, f.familia "
+        ResultSet listado = n.executeQuery("SELECT p.codpla, p.nombre, p.cientifico, f.familia, info "
                 + "FROM planta p "
                 + "INNER JOIN familia f ON f.codfam = p.familia");
 
@@ -59,7 +59,7 @@
         </div>  
         <table class="table table-striped table-verde">
           <tr class="table-dark">
-            <th></th><th>Nº planta</th><th>Nombre</th><th>N. Cientifico</th><th>N. Familia</th>
+            <th></th><th>Nº planta</th><th>Nombre</th><th>N. Cientifico</th><th>Datos de interés</th><th>N. Familia</th>
           </tr>             
 
           <%
@@ -68,7 +68,8 @@
               out.println("<td>" + listado.getString("codpla") + "</td>");
               out.println("<td>" + listado.getString("nombre") + "</td>");
               out.println("<td>" + listado.getString("cientifico") + "</td>");
-              out.println("<td>" + listado.getString("familia") + "</td>");            
+              out.println("<td>" + listado.getString("familia") + "</td>"); 
+              out.println("<td>" + listado.getString("info") + "</td>");
             }   
           %>
 
@@ -85,7 +86,7 @@
       </div>  
       <table class="table table-striped table-verde">
         <tr class="table-dark">
-          <th></th><th>Nº planta</th><th>Nombre</th><th>N. Cientifico</th><th>N. Familia</th><th>Tu Jardin</th>
+          <th></th><th>Nº planta</th><th>Nombre</th><th>N. Cientifico</th><th>N. Familia</th><th>Datos de interés</th><th>Tu Jardin</th>
         </tr>             
 
         <%
@@ -95,14 +96,12 @@
             out.println("<td>" + listado.getString("nombre") + "</td>");
             out.println("<td>" + listado.getString("cientifico") + "</td>");
             out.println("<td>" + listado.getString("familia") + "</td>");
-                                   
-            
-
+            out.println("<td>" + listado.getString("info") + "</td>");                                          
         %>
         <td>
           <form method="post" action="plantaJardin.jsp">
             <input type="hidden" name="codpla" value="<%=listado.getString("codpla") %>">
-            <button type="submit"  class="btn btn-info"><span class="bi bi-pencil-fill"> </span> Añadir</button>
+            <button type="submit"  class="btn btn-info"><span class="bi bi-plus-circle"> </span> </button>
           </form>
         </td>
         </td></tr>

@@ -27,7 +27,7 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
   <body>
-    <div id="wraper" class="container-flex vh-100 bg-success p-5">
+    <div id="wraper" class="container-flex vh-100 p-5">
       <div class="container m-auto">
       <div class="row m-auto">
         <div class="col p-3">
@@ -43,13 +43,17 @@
                 <label>Nº de planta:</label><input type="text" size="5" name="codpla" value="<%= request.getParameter("codpla") %>" readonly>
                 </div>
               <div class="col"> 
-            <label>Nombre:</label><input type="text" size="35" name="nombre" value="<%= request.getParameter("nombre") %>" required >
+            <label>Nombre:</label><input type="text" size="25" name="nombre" value="<%= request.getParameter("nombre") %>" required >
               </div>
                 <div class="col"> 
-                <label> Cientifico: </label><input type="text" size="35" name="cientifico" value="<%= request.getParameter("cientifico") %>" required>             
+                <label> Cientifico: </label><input type="text" size="25" name="cientifico" value="<%= request.getParameter("cientifico") %>" required>             
               </div>
                 <div class="col">
-                  <label>Familia: </label><input type="text" size="35" name="familia" value="<%= request.getParameter("familia") %>" readonly>
+                  <label>Familia: </label><input type="text" size="25" name="familia" value="<%= request.getParameter("familia") %>" readonly>
+              </div>
+              <div class="col">
+                <label>Datos de Interes: </label><input type="text" size="25" name="info" value="<%= request.getParameter("info") %>">
+              </div>
               </div>
               </div>
               </div>

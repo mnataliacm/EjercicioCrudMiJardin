@@ -42,7 +42,7 @@
         String user = nombre.toUpperCase().charAt(0) + nombre.substring(1, nombre.length()).toLowerCase();
         int conteo = 0;
 
-        ResultSet jardin = n.executeQuery("SELECT p.nombre, p.cientifico, f.familia, j.codpla"
+        ResultSet jardin = n.executeQuery("SELECT p.nombre, p.cientifico, f.familia, j.codpla, p.info"
               + " FROM familia f "
               + " INNER JOIN planta p ON f.codfam = p.familia"
               + " INNER JOIN jardin j ON p.codpla = j.codpla"
@@ -78,10 +78,7 @@
                     <h6 class="card-title"><%=jardin.getString("p.cientifico") %></h6>
                     <img src="" class="card-img-top">
                     <p class="card-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque diam volutpat commodo sed egestas egestas. Netus et malesuada fames ac turpis egestas maecenas. Nisl condimentum id venenatis a condimentum vitae sapien. Turpis egestas maecenas pharetra convallis. 
-                      out.println(<%=jardin.getString("codpla")%>);
-                      out.println(<%=nombre %> + " " + <%=codigo %> );
-
+                      <%=jardin.getString("info")%>);
                     </p>
                   </div>
                   <div class="card-footer">

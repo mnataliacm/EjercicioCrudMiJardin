@@ -17,6 +17,7 @@
       String actualizacion = "UPDATE planta SET "                         
                            + "nombre='" + request.getParameter("nombre")
                            + "', cientifico='" + request.getParameter("cientifico")
+                           + "', info='" + request.getParameter("info")
                            + "', familia=" + Integer.valueOf(request.getParameter("familia"))
                            + " WHERE codpla=" + Integer.valueOf(request.getParameter("codpla"));
       

@@ -40,7 +40,7 @@
         
         request.setCharacterEncoding("UTF-8");
               
-        ResultSet listado = l.executeQuery("SELECT codpla, nombre, cientifico, familia "
+        ResultSet listado = l.executeQuery("SELECT codpla, nombre, cientifico, familia, info "
                 + "FROM planta ");
         
       %> 
@@ -52,15 +52,16 @@
         </div>
           <table class="table table-striped table-verde">
             <form method="post" action ="nuevaPlanta.jsp">
-              <tr  class="table-warning"><th></th>
-                <td>Añadir planta: </td>
+              <tr  class="table-warning">
                 <td><input type="text" size="10" name="codpla" required></td>
                 <td><input type="text" name="nombre" size="25" required></td>
                 <td><input type="text" name="cientifico" size="25"required></td>
-                <td><input type="number" name="familia" size="10" required></td>
-                <td><button type="submit" value="Añadir" class="btn btn-primary"><span class="bi bi-plus-circle"></span> </button></td>
-                
+                <td><input type="number" name="familia" size="10" required></td> 
+                <td><textarea type="text" name="info"  rows="1" ></textarea></td>
+                <td><button type="submit" value="Añadir" class="btn btn-primary"><span class="bi bi-plus-circle"></span> </button></td>                
               </tr>
+              <table class="table table-striped table-verde">
+              <tr></tr>
               <tr>
                 <td>  <p class="text-danger">
               <%=
@@ -68,18 +69,18 @@
                         "" : session.getAttribute("error")
               %>
               <% session.removeAttribute("error"); %></td>
-              </tr>
+              </tr>    
               
-              <tr class="table-dark"><th></th><th>Nº planta</th><th>Nombre</th><th>N. Cientifico</th><th>N. Familia</th><th></th><th></th></tr>             
+              <tr class="table-dark"><th>Nº</th><th>Nombre</th><th>Cientifico</th><th>Familia</th><th>Datos de interés</th></tr>             
             </form>
               
             <%
               while (listado.next()) {
-                out.println("<tr><td>");
                 out.println("<td>" + listado.getString("codpla") + "</td>");
                 out.println("<td>" + listado.getString("nombre") + "</td>");
                 out.println("<td>" + listado.getString("cientifico") + "</td>");
                 out.println("<td>" + listado.getString("familia") + "</td>");
+                out.println("<td>" + listado.getString("info") + "</td>");
             %>
             
             <!-- modificar -->  
@@ -89,6 +90,7 @@
                 <input type="hidden" name="nombre" value="<%=listado.getString("nombre") %>">
                 <input type="hidden" name="cientifico" value="<%=listado.getString("cientifico") %>">
                 <input type="hidden" name="familia" value="<%=listado.getString("familia") %>">
+                <input type="hidden" name="info" value="<%=listado.getString("info") %>">
                 <button type="submit"  class="btn btn-info"><span class="bi bi-pencil-fill"> </span>
                 </button>
               </form>
