@@ -64,6 +64,7 @@ CREATE TABLE IF NOT EXISTS `mijardin`.`planta` (
   `codpla` INT(10) NOT NULL,
   `nombre` VARCHAR(50) NOT NULL,
   `cientifico` VARCHAR(50) NOT NULL,
+  `info` text NULL,
   `familia` INT(11) NOT NULL,
   PRIMARY KEY (`codpla`),
   INDEX `fk_planta_familia1_idx` (`familia` ASC),
@@ -78,17 +79,18 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 -- Volcado de datos para la tabla `planta`
 -- -----------------------------------------------------
-INSERT INTO `planta` (`codpla`, `nombre`, `cientifico`, `familia`) VALUES
-(1, 'Kiwi', 'Actinidia chinensis', 1),
-(2, 'Acebo', 'Ilex aquifolium', 2),
-(3, 'Boj', 'Buxus sempervirens', 3),
-(4, 'Geranio', 'Geranium pyrenaicum', 4),
-(5, 'Laurel', 'Laurus nobilis', 5),
-(6, 'Pasión', 'Passiflora caerulea', 6),
-(7, 'Granado', 'Púnica granatum', 7),
-(8, 'Fresa', 'Fragaria', 8),
-(9, 'Almendro', 'Prunus', 8),
-(10, 'Pensamiento', 'Viola tricolor', 9);
+INSERT INTO `planta` (`codpla`, `nombre`, `cientifico`, `info`, `familia`) VALUES
+(1, 'Kiwi', 'Actinidia chinensis', 'jñalkfjñlajrfoiejfkasdkjfñqaowiejfldsjfñawoejfldksj', 1),
+(2, 'Acebo', 'Ilex aquifolium', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque diam volutpat commodo sed egestas egestas. ', 2),
+(3, 'Boj', 'Buxus sempervirens', 'jkhkjhkjhgkjhl', 3),
+(4, 'Geranio', 'Geranium pyrenaicum', 'Lorem ipsum dolor sit amet, Pellentesque diam volutpat commodo sed egestas egestas.Turpis egestas maecenas pharetra convallis. ', 4),
+(5, 'Laurel', 'Laurus nobilis', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque diam volutpat commodo sed egestas egestas. Turpis egestas maecenas pharetra convallis. ', 5),
+(6, 'Pasión', 'Passiflora caerulea', 'Netus et malesuada fames ac turpis egestas maecenas. Nisl condimentum id venenatis a condimentum vitae sapien. Turpis egestas maecenas pharetra convallis. ', 6),
+(7, 'Granado', 'Púnica granatum', 'Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Netus et malesuada fames ac turpis egestas maecenas. Nisl condimentum id venenatis a condimentum vitae sapien. ', 7),
+(8, 'Fresa', 'Fragaria', 'Lorem ipsum dolor sit amet. Netus et malesuada fames ac turpis egestas maecenas. Nisl condimentum id venenatis a condimentum vitae sapien. ', 8),
+(9, 'Almendro', 'Prunus', 'Pellentesque diam volutpat commodo sed egestas egestas. Netus et malesuada fames ac turpis egestas maecenas. Turpis egestas maecenas pharetra convallis. ', 8),
+(10, 'Pensamiento', 'Viola tricolor', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', 9);
+
 
 -- -----------------------------------------------------
 -- Table `mijardin`.`jardin`
