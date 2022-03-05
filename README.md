@@ -50,6 +50,11 @@ Ventana de confirmación y de error (ok.jsp, error.jsp)
 ![ok](https://user-images.githubusercontent.com/74043250/156652466-ac21f310-e9e1-4b30-a81a-07285d250b84.png)
 ![error](https://user-images.githubusercontent.com/74043250/156652521-c8ec50a2-f11a-4c2e-b323-5aab0b181d9e.png)
 
+Perfil del usuario (perfil.jsp)
+
+![perfil](https://user-images.githubusercontent.com/74043250/156898265-d1d42833-a6f3-42b1-bd27-e46384a5d103.png)
+
+
 ![cenefaVerde](https://user-images.githubusercontent.com/74043250/156653966-c75a3654-bba9-4ef0-9793-89cefc746c77.png)
 
 ###### Funcionalidades
@@ -58,7 +63,7 @@ Ventana de confirmación y de error (ok.jsp, error.jsp)
 * El administrador solo se encarga de administrar los usuarios.
 * El colaborador se encarga de la base de datos de las plantas.
 * Según el usuario aparece la barra de herramientas con unos botones u otros (sin loguear, logueado, admin y colaborador).
-* 
+
 
 
 
