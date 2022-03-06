@@ -53,11 +53,12 @@
         </div>  
         <table class="table table-striped table-verde">
           <tr class="table-dark">
-            <th>Nº</th><th>Nombre</th><th>Cientifico</th><th>Familia</th><th>Datos de interés</th> 
+            <th></th><th>Nº</th><th>Nombre</th><th>Cientifico</th><th>Familia</th><th>Datos de interés</th> 
           </tr>             
 
           <%              
         while (busqueda.next()) {
+              out.println("<tr><td>");
               out.println("<td>" + busqueda.getString("codpla") + "</td>");
               out.println("<td>" + busqueda.getString("nombre") + "</td>");
               out.println("<td>" + busqueda.getString("cientifico") + "</td>");
