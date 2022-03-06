@@ -48,7 +48,7 @@
       <!-- listado de plantas     table-responsive-stack table  table-success table-striped -->
       <div class="container text-center">
         <div class=" panel mt-3">
-          <h2 class="panel-heading text-center bg-verde">BASE DE DATOS DE PLANTAS</h2>                    
+          <h2 class="panel-heading text-center bg-verde p-2">BASE DE DATOS DE PLANTAS</h2>                    
         </div>
           <table class="table table-striped table-verde">
             <form method="post" action ="nuevaPlanta.jsp">
@@ -60,8 +60,9 @@
                 <td><textarea type="text" name="info"  rows="1" ></textarea></td>
                 <td><button type="submit" value="Añadir" class="btn btn-primary"><span class="bi bi-plus-circle"></span> </button></td>                
               </tr>
-              <table class="table table-striped table-verde">
-              <tr></tr>
+            </form>
+          </table>
+              <table class="table table-striped table-verde">              
               <tr>
                 <td>  <p class="text-danger">
               <%=
@@ -70,9 +71,10 @@
               %>
               <% session.removeAttribute("error"); %></td>
               </tr>    
-              
-              <tr class="table-dark"><th>Nº</th><th>Nombre</th><th>Cientifico</th><th>Familia</th><th>Datos de interés</th></tr>             
-            </form>
+       
+              <tr class="table-dark">
+                <th>Nº</th><th>Nombre</th><th>Cientifico</th><th>Familia</th><th>Datos de interés</th>
+              </tr>              
               
             <%
               while (listado.next()) {
@@ -110,7 +112,6 @@
             %>
 
           </table>
-        </div>
       </div> <!-- cierre container lista -->
     </div> <!-- fin wraper -->
 

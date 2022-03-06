@@ -5,7 +5,7 @@
 <%-- 
     Author     : Natalia Castillo
 --%>
-<nav class="navbar navbar-expand-md navbar-light bg-warning sticky-top justify-content-between">
+<nav class="navbar navbar-expand-md navbar-light bg-naranja sticky-top justify-content-between">
   <div class="container-fluid fs-5">
     <a class="navbar-brand" href="#"><i
         class="bi bi-flower1" aria-hidden="true"></i></a>

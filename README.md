@@ -57,7 +57,7 @@ Perfil del usuario (perfil.jsp)
 
 ![cenefaVerde](https://user-images.githubusercontent.com/74043250/156653966-c75a3654-bba9-4ef0-9793-89cefc746c77.png)
 
-###### Funcionalidades
+#### Funcionalidades
 * Si accedes sin cuenta puedes ver la lista de plantas y crear una cuenta nueva.
 * Los usuarios registrados pueden ver su perfil y su jardin, al que pueden añadir plantas.
 * El administrador solo se encarga de administrar los usuarios.
@@ -68,10 +68,9 @@ Perfil del usuario (perfil.jsp)
 
 
 ---------------------------------------------------------------------------------------
-Sigue en construcción ...
-Añadir perfil de usuario
-Agregar eliminar plantas del jardin
-Mejorar bd y jardín para que el usuario puede añadir más información de sus plantas.
+##### Sigue en construcción ...
+* Añadir mas datos a la BD.
+* Que el usuario puede añadir más información de sus plantas.
 
 
 

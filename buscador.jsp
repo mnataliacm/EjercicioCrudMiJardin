@@ -55,11 +55,11 @@
       <!-- listado de plantas -->
       <div class="container text-center mt-4">
         <div class=" panel">
-          <h2 class="panel-heading text-center bg-verde">BASE DE DATOS DE PLANTAS</h2>       
+          <h2 class="panel-heading text-center bg-verde p-2">BASE DE DATOS DE PLANTAS</h2>
         </div>  
         <table class="table table-striped table-verde">
           <tr class="table-dark">
-            <th></th><th>Nº planta</th><th>Nombre</th><th>N. Cientifico</th><th>Datos de interés</th><th>N. Familia</th>
+           <th></th><th>Nº</th><th>Nombre</th><th>Cientifico</th><th>Familia</th><th>Datos de interés</th>
           </tr>             
 
           <%
@@ -74,19 +74,19 @@
           %>
 
         </table>
-      </div>
+      
     </div> <!-- cierre container lista -->
     <%
     } else {
     %>
     <!-- listado de plantas -->
     <div class="container text-center mt-4">
-      <div class=" panel">
-        <h2 class="panel-heading text-center bg-verde">BASE DE DATOS DE PLANTAS</h2>       
+      <div class=" panel mt-3">
+        <h2 class="panel-heading text-center bg-verde p-2">BASE DE DATOS DE PLANTAS</h2>
       </div>  
       <table class="table table-striped table-verde">
         <tr class="table-dark">
-          <th></th><th>Nº planta</th><th>Nombre</th><th>N. Cientifico</th><th>N. Familia</th><th>Datos de interés</th><th>Tu Jardin</th>
+           <th></th><th>Nº</th><th>Nombre</th><th>Cientifico</th><th>Familia</th><th>Datos de interés</th> 
         </tr>             
 
         <%
@@ -98,6 +98,7 @@
             out.println("<td>" + listado.getString("familia") + "</td>");
             out.println("<td>" + listado.getString("info") + "</td>");                                          
         %>
+        <!-- añadir al jardin -->
         <td>
           <form method="post" action="plantaJardin.jsp">
             <input type="hidden" name="codpla" value="<%=listado.getString("codpla") %>">
@@ -111,11 +112,11 @@
         %>
 
       </table>
-    </div>
-  </div> <!-- cierre container lista -->
+    </div> <!-- cierre container lista -->
   <%
   }
-  %>          
+  %> 
+ 
 </div> <!-- fin wraper -->
 
 <!-- JS bootstrap -->

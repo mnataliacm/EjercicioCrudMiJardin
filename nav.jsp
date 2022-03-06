@@ -6,7 +6,7 @@
     Author     : Natalia Castillo
 --%>
 
-<nav class="navbar navbar-expand-md navbar-light bg-verde sticky-top justify-content-between">
+<nav class="navbar navbar-expand-md navbar-light bg-naranja sticky-top justify-content-between">
   <div class="container-fluid fs-5">
     <a class="navbar-brand" href="index.jsp"><i
         class="bi bi-flower1" aria-hidden="true"></i></a>
@@ -18,7 +18,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-               
+
         <%
          if (session.getAttribute("usuario") == null) {
         %>
@@ -30,7 +30,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="buscador.jsp">Lista de Plantas</a>
-        </li>      
+        </li> 
         <%
           } else {
         %>
@@ -47,7 +47,11 @@
           }
         %>
       </ul>
-      
+      <form class="d-flex" action="buscar.jsp">
+        <input class="form-control me-2" type="search" name="buscar" placeholder="nombre de planta" aria-label="search" required>
+        <button class="btn btn-outline-success" type="submit" name>Buscar</button>
+      </form>
+      <pre>                    </pre>
       <form class="form-inline">
         <%
           if (session.getAttribute("usuario") == null) {
@@ -56,7 +60,7 @@
         <%
           } else {
         %>
-        <pre>Bienvenid@, <strong><%=session.getAttribute("usuario") %></strong>.   <a href="perfil.jsp">Tu perfil</a> (<a href="logout.jsp">Salir</a>)</pre>      
+        <pre>Bienvenid@, <strong><%=session.getAttribute("usuario") %></strong>.   <a href="perfil.jsp" class="text-success">Tu perfil</a> (<a href="logout.jsp">Salir</a>)</pre>      
         <%
                   
         }
