@@ -33,6 +33,12 @@ INSERT INTO `familia` (`codfam`, `familia`) VALUES
 (9, 'Violaceae'),
 (10, 'Zigophyllaceae');
 
+--
+-- AUTO_INCREMENT de la tabla `familia`
+--
+ALTER TABLE `familia`
+  MODIFY `codfam` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  
 -- -----------------------------------------------------
 -- Table `mijardin`.`usuarios`
 -- -----------------------------------------------------
@@ -57,6 +63,12 @@ INSERT INTO `usuarios` (`codusu`, `usuario`, `password`, `email`) VALUES
 (5, 'maria', 'maria', 'maria@email.com'),
 (6, 'usuario', 'usuario', '');
 
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `codusu` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  
 -- -----------------------------------------------------
 -- Table `mijardin`.`planta`
 -- -----------------------------------------------------
@@ -91,6 +103,11 @@ INSERT INTO `planta` (`codpla`, `nombre`, `cientifico`, `info`, `familia`) VALUE
 (9, 'Almendro', 'Prunus', 'Pellentesque diam volutpat commodo sed egestas egestas. Netus et malesuada fames ac turpis egestas maecenas. Turpis egestas maecenas pharetra convallis. ', 8),
 (10, 'Pensamiento', 'Viola tricolor', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', 9);
 
+--
+-- AUTO_INCREMENT de la tabla `planta`
+--
+ALTER TABLE `planta`
+  MODIFY `codpla` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 -- -----------------------------------------------------
 -- Table `mijardin`.`jardin`
